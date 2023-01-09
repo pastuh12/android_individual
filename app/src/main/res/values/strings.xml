@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Individual</string>
+    <string name="ful_filled">Статус: выполнено</string>
+    <string name="unful_filled">Статус: не выполнено</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/ClickableView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:background="@color/background_items"
+        android:elevation="2dp"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvAddress"
+            style="@style/BaseText.Big"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Адрес " />
+
+        <TextView
+            android:id="@+id/tvIsfulFilled"
+            style="@style/BaseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Доставленно "
+            app:layout_constraintStart_toStartOf="@+id/tvAddress"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

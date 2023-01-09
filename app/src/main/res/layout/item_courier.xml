@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        style="@style/ClickableView"
+        android:background="@color/background_items"
+        android:elevation="2dp"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvFirstNameTitle"
+            style="@style/ClickableView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="ФИО "
+            android:textAppearance="@style/BaseText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/BaseText.Big"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvFirstNameTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvFirstNameTitle"
+            tools:text="1234" />
+
+        <TextView
+            android:id="@+id/tvDeliveryMethodTitle"
+            style="@style/ClickableView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="4dp"
+            android:text="Способ доставки"
+            android:textAppearance="@style/BaseText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFirstName" />
+
+        <TextView
+            android:id="@+id/tvDeliveryMethod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAppearance="@style/BaseText.Big"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvDeliveryMethodTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvDeliveryMethodTitle"
+            tools:text="1234" />
+
+        <TextView
+            android:id="@+id/tvOrders"
+            style="@style/ClickableView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="4dp"
+            android:text="Заказы"
+            android:textAppearance="@style/BaseText.18"
+            app:layout_constraintTop_toBottomOf="@+id/tvDeliveryMethod"
+            tools:layout_editor_absoluteX="17dp" />
+
+        <TextView
+            android:id="@+id/tvFullInfo"
+            style="@style/ClickableView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="4dp"
+            android:text="Изменить данные"
+            android:textAppearance="@style/BaseText.18"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrders"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/tvAdditionalInfo"
+            style="@style/ClickableView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="4dp"
+            android:text="Доп. информация"
+            android:textAppearance="@style/BaseText.18"
+            app:layout_constraintTop_toBottomOf="@+id/tvFullInfo"
+            tools:layout_editor_absoluteX="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

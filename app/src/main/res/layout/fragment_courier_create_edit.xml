@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/background_screen">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/background_toolbar"
+                app:navigationIcon="@drawable/ic_back_arrow">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Курьер"
+                    android:textAppearance="@style/ToolbarTitle" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/tvFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="Фамилия курьера"
+            android:textAppearance="@style/BaseText"
+            app:layout_constraintBottom_toTopOf="@+id/etFirstName"
+            app:layout_constraintStart_toStartOf="@+id/etFirstName" />
+
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/tvLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="Имя курьера"
+            android:textAppearance="@style/BaseText"
+            app:layout_constraintBottom_toTopOf="@+id/etLastName"
+            app:layout_constraintStart_toStartOf="@+id/etLastName" />
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/etFirstName"
+            tools:layout_editor_absoluteX="45dp" />
+
+        <TextView
+            android:id="@+id/tvMiddleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="Отчество курьера"
+            android:textAppearance="@style/BaseText"
+            app:layout_constraintBottom_toTopOf="@+id/etMiddleName"
+            app:layout_constraintStart_toStartOf="@+id/etMiddleName" />
+
+        <EditText
+            android:id="@+id/etMiddleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+
+        <TextView
+            android:id="@+id/tvDeliveryMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="Способ доставки"
+            android:textAppearance="@style/BaseText"
+            app:layout_constraintBottom_toTopOf="@+id/etDeliveryMethod"
+            app:layout_constraintStart_toStartOf="@+id/etDeliveryMethod" />
+
+        <EditText
+            android:id="@+id/etDeliveryMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/etMiddleName" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/BaseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Сохранить"
+            app:layout_constraintTop_toBottomOf="@+id/etDeliveryMethod"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            style="@style/BaseButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/btn_delete"
+            android:text="Удалить"
+            app:layout_constraintEnd_toEndOf="@+id/btnSave"
+            app:layout_constraintStart_toStartOf="@+id/btnSave"
+            app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
